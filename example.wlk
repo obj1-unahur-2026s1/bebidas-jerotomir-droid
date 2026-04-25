@@ -3,10 +3,11 @@ object tito{
     var dosisConsumida = 0
 
     method peso() = 70 
-    method velocidad() = sustancia.rendimientoQueOtorga(dosisConsumida) * self.inerciaBase() / self.peso()
+    method velocidad() = self.rendiminento() * self.inerciaBase() / self.peso()
     method inerciaBase() = 490
-    method rendimineto() = 0
-    
+    method rendiminento() = sustancia.rendimientoQueOtorga(dosisConsumida)
+    method sustanciaActual() = sustancia
+    method dosisConsumida() = dosisConsumida
     method consumir(cantidad, bebida){
     sustancia = bebida
     dosisConsumida = cantidad 
